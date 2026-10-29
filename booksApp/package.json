@@ -29,14 +29,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-
-    "cy:open": "cypress open",
-
-    "cy:laptop:headless:chrome": "cypress run --browser chrome --config viewportWidth=1920,viewportHeight=1080",
-    "cy:laptop:headed:electron": "cypress open --browser electron --config viewportWidth=1920,viewportHeight=1080",
-
-    "cy:mobile:headless:chrome": "cypress run --browser chrome --config viewportWidth=390,viewportHeight=844",
-    "cy:mobile:headed:electron": "cypress open --browser electron --config viewportWidth=390,viewportHeight=844"
+    
+    "cy:run:desktop:chrome:headless": "cypress run --config-file cypress.config.js --browser chrome --headless --config viewportWidth=1920,viewportHeight=1080",
+    "cy:run:desktop:chrome:headed": "cypress run --config-file cypress.config.js --browser chrome --headed --config viewportWidth=1920,viewportHeight=1080",
+    
+    "cy:run:mobile:edge:headless": "cypress run --config-file cypress.config.js --browser edge --headless --config viewportWidth=390,viewportHeight=844",
+    "cy:run:mobile:edge:headed": "cypress run --config-file cypress.config.js --browser edge --headed --config viewportWidth=390,viewportHeight=844",
+    
+    "cy:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
